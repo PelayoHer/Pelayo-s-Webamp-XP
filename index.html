@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WebAmp + Butterchurn | Classic Music Visualizer</title>
+    <!-- Google Fonts: Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Outfit:wght@300;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/style.css">
+</head>
+<body>
+    <div id="app"></div>
+
+    <!-- Botón de Restauración (Flotante) -->
+    <button id="restore-player" title="Restaurar Reproductor">
+        <img src="https://webamp.org/favicon.ico" alt="Restaurar">
+    </button>
+
+    <!-- UI Superior Unificada (Skins y Milkdrop) -->
+    <div class="ui-controls">
+        <div class="skin-selector-container">
+            <select id="skin-select">
+                <option>Cargando skins...</option>
+            </select>
+        </div>
+        <div class="milkdrop-selector-container-wrapper">
+            <button id="fav-btn" title="Marcar como favorito">☆</button>
+            <div class="milkdrop-selector-container">
+                <select id="preset-select">
+                    <option>Cargando estilos...</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Fondo Premium (Animado vía CSS) -->
+    <!-- Fondo con Efectos Dinámicos -->
+    <div class="background-wrapper">
+        <div class="glow-orb orb-1"></div>
+        <div class="glow-orb orb-2"></div>
+        <div class="glow-orb orb-3"></div>
+    </div>
+
+    <button id="help-btn" title="Información y Ayuda">?</button>
+
+    <!-- Modal de Ayuda -->
+    <div id="help-modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Guía de Usuario - Winamp XP</h2>
+                <button id="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <section>
+                    <h3>Gestión de Audio</h3>
+                    <p>Para iniciar la reproducción, arrastre archivos de audio en formato MP3 directamente sobre la interfaz del reproductor o dentro del área de la lista de reproducción (Playlist).</p>
+                </section>
+                <section>
+                    <h3>Personalización de Interfaz (Skins)</h3>
+                    <ul>
+                        <li><strong>Selector Directo:</strong> Utilice el menú desplegable en la esquina superior derecha para alternar entre las apariencias preconfiguradas.</li>
+                        <li><strong>Carga Manual:</strong> El sistema soporta la importación dinámica de skins mediante el arrastre de archivos con extensión <code>.wsz</code> sobre el reproductor principal.</li>
+                        <li><strong>Repositorio Externo:</strong> Puede adquirir una vasta colección de apariencias adicionales en el portal oficial <a href="https://skins.webamp.org/" target="_blank">skins.webamp.org</a>.</li>
+                    </ul>
+                </section>
+                <section>
+                    <h3>Visualizaciones Milkdrop</h3>
+                    <p>El motor de visualización Milkdrop se encuentra configurado para alternar de forma aleatoria entre más de 600 estilos con cada cambio de pista. Para fijar un estilo específico, utilice el selector secundario ubicado en la barra de controles superior.</p>
+                </section>
+                <section>
+                    <h3>Controles Avanzados</h3>
+                    <p>Mediante el clic derecho en cualquier sección del chasis del reproductor, podrá acceder a menús contextuales para la gestión detallada de la reproducción, ecualización y opciones internas del visualizador.</p>
+                </section>
+            </div>
+            <div class="modal-footer">
+                <p>Disfruta de la experiencia retro definitiva.</p>
+                <p style="margin-top: 8px; font-weight: bold; color: var(--neon-cyan);">PelayoHer ❤️</p>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+</body>
+</html>
