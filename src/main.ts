@@ -21,7 +21,7 @@ async function bootstrap() {
     
     // Verificación de seguridad: Asegurar que los elementos críticos existen
     if (!appContainer || !skinSelect || !presetSelect || !favBtn || !restoreBtn) {
-        console.error("WebAmp: Elementos críticos de la interfaz no encontrados.");
+        console.error("Avx Player: Elementos críticos de la interfaz no encontrados.");
         return;
     }
 
@@ -191,7 +191,7 @@ async function bootstrap() {
         try {
             webamp.setSkinFromUrl((e.target as HTMLSelectElement).value);
         } catch (err) {
-            console.warn("WebAmp: Error al cambiar de skin.", err);
+            console.warn("Avx Player: Error al cambiar de skin.", err);
         }
     });
 
@@ -250,7 +250,7 @@ async function bootstrap() {
            });
         }, 1000);
     } catch (e) {
-        console.error("WebAmp Bootstrap Error:", e);
+        console.error("Avx Player Bootstrap Error:", e);
     }
 }
 
